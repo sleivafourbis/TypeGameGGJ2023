@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[System.Serializable] 
-public class Word
-{
-    public int Id;
-    public string Texto;
-    public int Dificultad;
-}
+// [System.Serializable] 
+// public class Word
+// {
+//     public int Id;
+//     public string Texto;
+//     public int Dificultad;
+// }
 
 public class Core : MonoBehaviour
 {
@@ -21,11 +21,11 @@ public class Core : MonoBehaviour
     void Start()
     {
         _palabra = new List<char>();
-        PalabrasAcutales = Palabras.Where(c => c.Dificultad == NivelDificultad).ToList();
+        PalabrasAcutales = Palabras.Where(c => c.Difficulty == NivelDificultad).ToList();
         var valorMinimo = PalabrasAcutales.Min(c => c.Id);
         var valorMaximo = PalabrasAcutales.Max(c => c.Id);
         var numeroRandom = Random.Range(valorMinimo, valorMaximo);
-        _palabraSeleccionada = PalabrasAcutales.SingleOrDefault(c => c.Id == numeroRandom)!.Texto;
+        _palabraSeleccionada = PalabrasAcutales.SingleOrDefault(c => c.Id == numeroRandom)!.Text;
         var arr = _palabraSeleccionada.ToCharArray();
         Debug.Log(arr[1]);
         foreach (var item in arr)

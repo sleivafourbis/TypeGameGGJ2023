@@ -1,0 +1,29 @@
+{
+    "WordList": [
+        {
+            "Id": 0,
+            "Text": "hola",
+            "Difficulty": 1
+        },
+        {
+            "Id": 1,
+            "Text": "chao",
+            "Difficulty": 1
+        },
+        {
+            "Id": 2,
+            "Text": "bota",
+            "Difficulty": 1
+        },
+        {
+            "Id": 3,
+            "Text": "bolso",
+            "Difficulty": 1
+        },
+        {
+            "Id": 4,
+            "Text": "ego",
+            "Difficulty": 1
+        }
+    ]
+}
